@@ -1,0 +1,33 @@
+
+<div class="container">
+  <div class="d-flex justify-content-between flex-wrap flex-mdnowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+      <h2 class=""> Employee List</h2>
+  </div>
+
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+
+      <th scope="col" sortable="name">Name</th>
+      <th scope="col" sortable="area">Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let Employee of Employee; let i = index">
+      <th scope="row">{{ Employee.id }}</th>
+      <td>
+        {{ Employee.name }}
+      </td>
+      <td>{{ Employee.age }}</td>
+      <td>
+        <button type="button" class="btn btn-danger"(click)="delete(Employee.id,i)">Delete</button>
+      </td>
+      <td>
+         <button type="button" class="btn btn-success" routerLink="/edit-employee/{{Employee.id}}">Edit</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>

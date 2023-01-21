@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="d-flex justify-content-between flex-wrap flex-mdnowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+      <h2 class=""> Employee List</h2>
+  </div>
+
+<div class="row justify-content-center mt-5">
+  <div class="col-md-4">
+      <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+              <div class="mb-3">
+                  <label class="form-label">Name  </label>
+                  <input type="text" class="form-control" formControlName="name" required >
+              </div>
+              <div class="mb-3">
+                  <label class="form-label">Age </label>
+                  <input type="text" class="form-control" formControlName="age" required>
+              </div>
+
+              <div class="mb-3">
+                  <button type="submit" class="btn btn-primary">Add</button>
+              </div>
+      </form>
+
+  </div>
+</div>
+</div>
